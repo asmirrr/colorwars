@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A two-color Conway's Game of Life experiment.">
+  <title>Color Wars — Game of Life</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <div>
+        <p class="eyebrow">Survival simulation</p>
+        <h1>Color Wars</h1>
+        <p class="subtitle">Conway's Game of Life, with a little competition.</p>
+      </div>
+      <div class="status" aria-live="polite">
+        <span id="generation">Generation 0</span>
+        <span id="population">0 alive · 0 blue · 0 red</span>
+      </div>
+    </header>
+
+    <section class="screen" aria-label="Color Wars game screen">
+      <div class="screen-top" aria-hidden="true"></div>
+      <div class="board">
+        <canvas id="world" aria-label="Interactive Color Wars simulation grid"></canvas>
+      </div>
+      <div class="screen-bottom" aria-hidden="true"></div>
+    </section>
+
+    <section class="controls" aria-label="Simulation controls">
+      <div class="control-group">
+        <button class="primary" id="toggle" type="button" aria-pressed="false">Play</button>
+        <button id="step" type="button">Step</button>
+        <button id="clear" type="button">Clear</button>
+      </div>
+      <div class="control-group tools" aria-label="Drawing color">
+        <button class="blue selected" id="blueTool" type="button" aria-pressed="true"><span class="swatch"></span>Blue</button>
+        <button class="red" id="redTool" type="button" aria-pressed="false"><span class="swatch"></span>Red</button>
+        <button id="randomize" type="button">Randomize</button>
+      </div>
+      <label class="speed" for="speed">Speed <input id="speed" type="range" min="1" max="20" value="8"><span id="speedValue">8 t/s</span></label>
+    </section>
+
+    <footer>
+      <span>Draw with click or drag. Right-click erases.</span>
+      <span>Births inherit the 2–1 neighbor-color majority.</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
