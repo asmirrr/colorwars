@@ -4,9 +4,9 @@ A small, two-color version of Conway's Game of Life. Draw blue and red cells, th
 
 ![Color Wars game screen](docs/color-wars.png)
 
-## Run it
+## Try it
 
-No install or build step is needed. Open `index.html` in a modern browser.
+https://asmirrr.github.io/colorwars/
 
 ## Controls
 
