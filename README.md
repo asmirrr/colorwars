@@ -2,7 +2,7 @@
 
 A small, two-color version of Conway's Game of Life. Draw blue and red cells, then see which color wins as the simulation evolves.
 
-![Color Wars game screen](docs/color-wars.png)
+![Color Wars game screen](docs/screenshot.png)
 
 ## Try it
 
